@@ -1,3 +1,3 @@
 # Introduction
 
-Welcome to the Di Nkɔmɔ API.
+Welcome to Dora Boateng's API reference.
