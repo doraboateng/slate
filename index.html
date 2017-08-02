@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Dora Boateng API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;,&quot;php&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,9 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="shell">Shell</a>
+              <a href="#" data-language-name="javascript">jQuery</a>
+              <a href="#" data-language-name="php">PHP</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -223,43 +222,199 @@
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Kittens">Get All Kittens</a>
+                    <a href="#overview" class="toc-h2 toc-link" data-title="Introduction">Overview</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Get a Specific Kitten</a>
+                    <a href="#authentication" class="toc-h2 toc-link" data-title="Introduction">Authentication</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Kittens">Delete a Specific Kitten</a>
+                    <a href="#working-with-collections" class="toc-h2 toc-link" data-title="Introduction">Working with Collections</a>
+                  </li>
+                  <li>
+                    <a href="#embeds" class="toc-h2 toc-link" data-title="Introduction">Embeds</a>
+                  </li>
+                  <li>
+                    <a href="#method-spoofing" class="toc-h2 toc-link" data-title="Introduction">Method Spoofing</a>
+                  </li>
+                  <li>
+                    <a href="#rate-limiting" class="toc-h2 toc-link" data-title="Introduction">Rate Limiting</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#alphabets" class="toc-h1 toc-link" data-title="Alphabets">Alphabets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#embeds-for-alphabets" class="toc-h2 toc-link" data-title="Alphabets">Embeds for alphabets</a>
+                  </li>
+                  <li>
+                    <a href="#list-alphabets" class="toc-h2 toc-link" data-title="Alphabets">List alphabets</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-an-alphabet" class="toc-h2 toc-link" data-title="Alphabets">Retrieve an alphabet</a>
+                  </li>
+                  <li>
+                    <a href="#create-an-alphabet" class="toc-h2 toc-link" data-title="Alphabets">Create an alphabet</a>
+                  </li>
+                  <li>
+                    <a href="#update-an-alphabet" class="toc-h2 toc-link" data-title="Alphabets">Update an alphabet</a>
+                  </li>
+                  <li>
+                    <a href="#delete-an-alphabet" class="toc-h2 toc-link" data-title="Alphabets">Delete an alphabet</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#countries" class="toc-h1 toc-link" data-title="Countries">Countries</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-countries" class="toc-h2 toc-link" data-title="Countries">List countries</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-country" class="toc-h2 toc-link" data-title="Countries">Retrieve a country</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-country" class="toc-h2 toc-link" data-title="Countries">Create a country</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-country" class="toc-h2 toc-link" data-title="Countries">Update a country</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-country" class="toc-h2 toc-link" data-title="Countries">Delete a country</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cultures" class="toc-h1 toc-link" data-title="Cultures">Cultures</a>
+          </li>
+          <li>
+            <a href="#definitions" class="toc-h1 toc-link" data-title="Definitions">Definitions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#embeds-for-definitions" class="toc-h2 toc-link" data-title="Definitions">Embeds for definitions</a>
+                  </li>
+                  <li>
+                    <a href="#list-definitions" class="toc-h2 toc-link" data-title="Definitions">List definitions</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-definition" class="toc-h2 toc-link" data-title="Definitions">Retrieve a definition</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-definition" class="toc-h2 toc-link" data-title="Definitions">Create a definition</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-definition" class="toc-h2 toc-link" data-title="Definitions">Update a definition</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-definition" class="toc-h2 toc-link" data-title="Definitions">Delete a definition</a>
+                  </li>
+                  <li>
+                    <a href="#definition-of-the-day" class="toc-h2 toc-link" data-title="Definitions">Definition of the day</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#definition-types" class="toc-h1 toc-link" data-title="Definition types">Definition types</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#count" class="toc-h2 toc-link" data-title="Definition types">Count</a>
+                  </li>
+                  <li>
+                    <a href="#search" class="toc-h2 toc-link" data-title="Definition types">Search</a>
+                  </li>
+                  <li>
+                    <a href="#exact-title-match" class="toc-h2 toc-link" data-title="Definition types">Exact title match</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#languages" class="toc-h1 toc-link" data-title="Languages">Languages</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#embeds-for-languages" class="toc-h2 toc-link" data-title="Languages">Embeds for languages</a>
+                  </li>
+                  <li>
+                    <a href="#list-languages" class="toc-h2 toc-link" data-title="Languages">List languages</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-language-resource" class="toc-h2 toc-link" data-title="Languages">Retrieve a language resource</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-language-resource" class="toc-h2 toc-link" data-title="Languages">Create a language resource</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-language-resource" class="toc-h2 toc-link" data-title="Languages">Update a language resource</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-language-resource" class="toc-h2 toc-link" data-title="Languages">Delete a language resource</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#embeds-for-references" class="toc-h2 toc-link" data-title="References">Embeds for references</a>
+                  </li>
+                  <li>
+                    <a href="#list-references" class="toc-h2 toc-link" data-title="References">List references</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-reference" class="toc-h2 toc-link" data-title="References">Retrieve a reference</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-reference" class="toc-h2 toc-link" data-title="References">Create a reference</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-reference" class="toc-h2 toc-link" data-title="References">Update a reference</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-reference" class="toc-h2 toc-link" data-title="References">Delete a reference</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tags" class="toc-h1 toc-link" data-title="Tags">Tags</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#embeds-for-tags" class="toc-h2 toc-link" data-title="Tags">Embeds for tags</a>
+                  </li>
+                  <li>
+                    <a href="#list-tags" class="toc-h2 toc-link" data-title="Tags">List tags</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-tag" class="toc-h2 toc-link" data-title="Tags">Retrieve a tag</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-tag" class="toc-h2 toc-link" data-title="Tags">Create a tag</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-tag" class="toc-h2 toc-link" data-title="Tags">Update a tag</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-tag" class="toc-h2 toc-link" data-title="Tags">Delete a tag</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://www.doraboateng.com'>Dora Boateng</a></li>
+            <li><a href='https://github.com/doraboateng/docs'>Edit on Github</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>Welcome to the Di Nkɔmɔ API.</p>
+<h2 id='overview'>Overview</h2>
+<ul>
+<li>Current Version: <strong>Draft 2</strong></li>
+<li>Root Endpoint: <strong>https://api.dinkomo.frnk.ca/0.2/</strong></li>
+</ul>
+<h2 id='authentication'>Authentication</h2>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
@@ -272,13 +427,18 @@
 </code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
   -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
 </code></pre>
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
+
+<aside class="success">
+Dos
+</aside>
+
+<aside class="warning">
+Donts
+</aside>
 
 <p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
 
@@ -289,99 +449,27 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<h2 id='working-with-collections'>Working with Collections</h2>
+<aside class="warning">
+In Development.
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h3 id='sorting'>Sorting</h3><h3 id='filtering'>Filtering</h3><h3 id='field-selection'>Field Selection</h3><h3 id='paging'>Paging</h3><h2 id='embeds'>Embeds</h2>
+<aside class="warning">
+In Development.
+</aside>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Embeds, sometimes referred to as <em>expansions</em>, allow you to include related data to a model in a single request.</p>
+<h2 id='method-spoofing'>Method Spoofing</h2>
+<aside class="warning">
+In Development.
+</aside>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p>For clients that don&#39;t support the <code>PUT</code>, <code>PATCH</code> or <code>DELETE</code>, these verbs can be simulated with the <code>X-HTTP-Method-Override</code> HTTP header.</p>
+<h2 id='rate-limiting'>Rate Limiting</h2>
+<aside class="warning">
+In Development.
+</aside>
+<h1 id='alphabets'>Alphabets</h1><h2 id='embeds-for-alphabets'>Embeds for alphabets</h2>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -389,38 +477,531 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td><strong>languageList</strong></td>
+<td><code>[array]</code> Languages using this alphabet.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
+<h2 id='list-alphabets'>List alphabets</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.dinkomo.frnk.ca/0.2/alphabet?page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ፊደል"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transliteration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ፊደል"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amh-Ethi"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"scriptCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ethi"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"letters"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-08 03:28:14"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-24 22:33:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nMY3oCmE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alphabet"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twi Alphabet"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transliteration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twi Alphabet"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twi-Latn"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"scriptCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Latn"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"letters"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdeɛfghiklmnoɔprstuwy</span><span class="se">\n</span><span class="s2">ABDEƐFGHIKLMNOƆPRSTUWY"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-06 23:23:02"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-24 22:33:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPjLtzM"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alphabet"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>GET /alphabets</code></p>
+<h2 id='retrieve-an-alphabet'>Retrieve an alphabet</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twi Alphabet"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transliteration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twi Alphabet"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twi-Latn"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scriptCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Latn"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"letters"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abdeɛfghiklmnoɔprstuwy</span><span class="se">\n</span><span class="s2">ABDEƐFGHIKLMNOƆPRSTUWY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-06 23:23:02"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-24 22:33:07"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPjLtzM"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alphabet"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /alphabets/{id}</code></p>
+<h2 id='create-an-alphabet'>Create an alphabet</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>POST /alphabets</code></p>
+<h2 id='update-an-alphabet'>Update an alphabet</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>PUT /alphabets/{id}</code></p>
+<h2 id='delete-an-alphabet'>Delete an alphabet</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>DELETE /alphabets/{id}</code></p>
+<h1 id='countries'>Countries</h1><h2 id='list-countries'>List countries</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">264</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.dinkomo.frnk.ca/0.2/country?page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Åland Islands"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"altNames"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AX"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-06 23:22:34"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-24 22:33:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YEpvf75M"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"country"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zimbabwe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"altNames"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ZW"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-06 23:22:34"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-24 22:33:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NE1PfwXW"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"country"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /countries</code></p>
+<h2 id='retrieve-a-country'>Retrieve a country</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zimbabwe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"altNames"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ZW"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-06 23:22:34"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-24 22:33:07"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NE1PfwXW"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"country"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /countries/{id}</code></p>
+<h2 id='create-a-country'>Create a country</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>POST /countries</code></p>
+<h2 id='update-a-country'>Update a country</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>PUT /countries/{id}</code></p>
+<h2 id='delete-a-country'>Delete a country</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>DELETE /countries/{id}</code></p>
+<h1 id='cultures'>Cultures</h1>
+<aside class="warning">
+In Development.
+</aside>
+<h1 id='definitions'>Definitions</h1><h2 id='embeds-for-definitions'>Embeds for definitions</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Contents</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>mainTitle</strong></td>
+<td><code>[string]</code> Main title for definition.</td>
+</tr>
+<tr>
+<td><strong>titleList</strong></td>
+<td><code>[array]</code> All definition titles.</td>
+</tr>
+<tr>
+<td><strong>translation</strong></td>
+<td><code>[array]</code> Translation in current locale.</td>
+</tr>
+<tr>
+<td><strong>translationData</strong></td>
+<td><code>[object]</code> All translations.</td>
+</tr>
+<tr>
+<td><strong>mainLanguage</strong></td>
+<td><code>[object]</code> Main language definition exists in.</td>
+</tr>
+<tr>
+<td><strong>languageList</strong></td>
+<td><code>[array]</code> All languages definition exists in.</td>
+</tr>
+<tr>
+<td><strong>tagList</strong></td>
+<td><code>[array]</code> Tags.</td>
+</tr>
+<tr>
+<td><strong>relatedDefinitionList</strong></td>
+<td><code>[array]</code> Related definitions.</td>
+</tr>
+<tr>
+<td><strong>referenceList</strong></td>
+<td><code>[array]</code> References for translation in current locale.</td>
+</tr>
+</tbody></table>
+<h2 id='list-definitions'>List definitions</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>GET /definitions</code></p>
+<h2 id='retrieve-a-definition'>Retrieve a definition</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+// /api/0.2/definition/8MyQRHYM?embed=uri,editUri,mainTitle,titleString,titleList,translation,languageList
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"word"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"subType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"noun"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mainLanguageCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twi"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="err">​</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-04-09 13:10:07"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-04-09 13:10:07"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dinkomo.frnk.ca/twi/ɔdɔ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"editUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dinkomo.frnk.ca/admin/definition/8MyQRHYM/edit?return=summary"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mainTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ɔdɔ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"titleString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ɔdɔ, dɔ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"titleList"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ɔdɔ"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transliteration"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-13 14:39:09"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-13 14:39:09"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dɔ"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transliteration"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-13 14:39:09"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-13 14:39:09"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"translation"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"practical"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"eng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"love"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"literal"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"eng"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"eng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an intense feeling of deep affection"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"languageList"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"twi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Asante Twi"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"aka"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Akan"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8MyQRHYM"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"definition"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /definitions/{id}</code></p>
+<h2 id='create-a-definition'>Create a definition</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>POST /definitions</code></p>
+<h2 id='update-a-definition'>Update a definition</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>PUT /definitions/{id}</code></p>
+<h2 id='delete-a-definition'>Delete a definition</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>DELETE /definitions/{id}</code></p>
+<h2 id='definition-of-the-day'>Definition of the day</h2>
+<p><code>GET /words/daily</code></p>
+
+<p><code>GET /expressions/daily</code></p>
+<h1 id='definition-types'>Definition types</h1>
+<p>Definitions are categorized by type. There are currently four supported definition types:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>word</strong></td>
+<td><code>/words</code></td>
+<td>Word definitions.</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td><code>/names</code></td>
+<td>Proper names, including places and people.</td>
+</tr>
+<tr>
+<td><strong>expression</strong></td>
+<td><code>/expressions</code></td>
+<td>Expressions, proverbs, sayings, etc.</td>
+</tr>
+<tr>
+<td><strong>story</strong></td>
+<td><code>/stories</code></td>
+<td>Stories, poems, songs, etc.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Definition types have the same embeddable attributes as Definitions.
+</aside>
+<h2 id='count'>Count</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>GET /{definitionType}/count</code></p>
+<h2 id='search'>Search</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>GET /{definitionType}/search/{query}</code></p>
+<h2 id='exact-title-match'>Exact title match</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>GET /{definitionType}/title/{title}</code></p>
+<h1 id='languages'>Languages</h1><h2 id='embeds-for-languages'>Embeds for languages</h2>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -428,74 +1009,447 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td><strong>uri</strong></td>
+<td><code>[string]</code> Language URI</td>
+</tr>
+<tr>
+<td><strong>parentUri</strong></td>
+<td><code>[string]</code> URI of parent language</td>
+</tr>
+<tr>
+<td><strong>parentName</strong></td>
+<td><code>[string]</code> Name of parent language</td>
+</tr>
+<tr>
+<td><strong>definitionsCount</strong></td>
+<td><code>[integer]</code> Number of definitions in language</td>
+</tr>
+<tr>
+<td><strong>firstDefinition</strong></td>
+<td><code>[object]</code> First definition for language</td>
+</tr>
+<tr>
+<td><strong>latestDefinition</strong></td>
+<td><code>[object]</code> Latest definition for language</td>
+</tr>
+<tr>
+<td><strong>randomDefinition</strong></td>
+<td><code>[object]</code> Random definition in language</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<h2 id='list-languages'>List languages</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
-<p>The Kittn API uses the following error codes:</p>
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>GET /languages</code></p>
+<h2 id='retrieve-a-language-resource'>Retrieve a language resource</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
+<span class="c1">// ...
+// /api/0.2/language/OJjYiQEa?embed=parentName,definitionsCount,uri,editUri,firstDefinition,latestDefinition,randomDefinition
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twi"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parentCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aka"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Asante Twi"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transliteration"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"altNames"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ashanti,  Twi"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-04-09 13:08:27"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-03 14:08:58"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parentName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Akan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"definitionsCount"</span><span class="p">:</span><span class="w"> </span><span class="err">​</span><span class="mi">950</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dinkomo.frnk.ca/twi"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"editUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dinkomo.frnk.ca/admin/language/twi/edit"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"firstDefinition"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"mainTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ɔdɔ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"translation"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"practical"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"eng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"love"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"literal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"eng"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"eng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an intense feeling of deep affection"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"word"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"subType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"noun"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"latestDefinition"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"randomDefinition"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OJjYiQEa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"language"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /languages/{code}</code></p>
+<h2 id='create-a-language-resource'>Create a language resource</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>POST /languages</code></p>
+<h2 id='update-a-language-resource'>Update a language resource</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>PUT /languages/{code}</code></p>
+<h2 id='delete-a-language-resource'>Delete a language resource</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>DELETE /languages/{id}</code></p>
+<h1 id='references'>References</h1><h2 id='embeds-for-references'>Embeds for references</h2>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks</td>
+<td><strong>name</strong></td>
+<td><code>[string]</code> Name or title of reference.</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong</td>
+<td><strong>shortCitation</strong></td>
+<td><code>[string]</code> Abridged reference summary.</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only</td>
+<td><strong>longCitation</strong></td>
+<td><code>[string]</code> Longer reference summary.</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found</td>
+<td><strong>apaCitation</strong></td>
+<td><code>[string]</code> APA-style citation.</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method</td>
+<td><strong>chicagoCitation</strong></td>
+<td><code>[string]</code> Chicago-style citation.</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json</td>
+<td><strong>harvardCitation</strong></td>
+<td><code>[string]</code> Harvard-style citation.</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers</td>
+<td><strong>ieeeCitation</strong></td>
+<td><code>[string]</code> IEEE-style citation.</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot</td>
+<td><strong>iso690Citation</strong></td>
+<td><code>[string]</code> ISO 690-style citation.</td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td><strong>mlaCitation</strong></td>
+<td><code>[string]</code> MLA-style citation.</td>
 </tr>
 </tbody></table>
+<h2 id='list-references'>List references</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.dinkomo.frnk.ca/0.2/reference?page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"book"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Florence Abena Dolphyne"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Comprehensive Course in Twi (Asante) for the Non-Twi Learner"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1996-01-01"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ghana Universities Press"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"isbn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9964302452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"isbn-13"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9789964302450"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accra"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NE1lCDWP"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /references</code></p>
+<h2 id='retrieve-a-reference'>Retrieve a reference</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"book"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Florence Abena Dolphyne"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Comprehensive Course in Twi (Asante) for the Non-Twi Learner"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1996-01-01"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ghana Universities Press"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isbn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9964302452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isbn-13"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9789964302450"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accra"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NE1lCDWP"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /references/{id}</code></p>
+<h2 id='create-a-reference'>Create a reference</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>POST /references</code></p>
+<h2 id='update-a-reference'>Update a reference</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>PUT /references/{id}</code></p>
+<h2 id='delete-a-reference'>Delete a reference</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>DELETE /references/{id}</code></p>
+<h1 id='tags'>Tags</h1><h2 id='embeds-for-tags'>Embeds for tags</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>definitionCount</strong></td>
+<td><code>[string]</code> Number of definitions under the tag.</td>
+</tr>
+</tbody></table>
+<h2 id='list-tags'>List tags</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">87</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.dinkomo.frnk.ca/0.2/tag?page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"numbers"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8MygI5E2"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"face"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oMBLIdEA"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /tags</code></p>
+<h2 id='retrieve-a-tag'>Retrieve a tag</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"body"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"uniqueId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XE2KI7JV"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>GET /tags/{id}</code></p>
+<h2 id='create-a-tag'>Create a tag</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>POST /tags</code></p>
+<h2 id='update-a-tag'>Update a tag</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>PUT /tags/{id}</code></p>
+<h2 id='delete-a-tag'>Delete a tag</h2>
+<blockquote>
+<p>Sample request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// ...</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// ...
+</span></code></pre>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p><code>DELETE /tags/{id}</code></p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="shell">Shell</a>
+                <a href="#" data-language-name="javascript">jQuery</a>
+                <a href="#" data-language-name="php">PHP</a>
           </div>
       </div>
     </div>
