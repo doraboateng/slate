@@ -7,7 +7,27 @@
 ```
 
 ```javascript
-// Sample response
+// ...
+```
+
+```php
+<?php
+
+// ...
+```
+
+> Sample compact response
+
+```json
+{
+  "twi": "Asante Twi",
+  "aka": "Akan"
+}
+```
+
+> Sample response
+
+```json
 {
   "results": [
     {
@@ -36,24 +56,6 @@
     }
   ]
 }
-
-// Sample compact response
-{
-  "twi": "Asante Twi",
-  "aka": "Akan"
-}
-```
-
-```php
-<?php
-
-// ...
-```
-
-> Sample response
-
-```json
-
 ```
 
 `GET /languages/search`
