@@ -50,6 +50,7 @@ includes:
 
   - languages/intro
   - languages/list
+  - languages/search
   - languages/get
   - languages/post
   - languages/put
