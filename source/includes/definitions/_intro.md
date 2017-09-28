@@ -13,3 +13,24 @@
 | **tags** | `[array]` Tags. |
 | **relatedDefinitionList** | `[array]` Related definitions. |
 | **referenceList** | `[array]` References for translation in current locale. |
+
+## Compact search results for definitions
+
+```json
+[
+    {
+        "type": "word",
+        "subType": "noun",
+        "titles": [
+            "akwaaba"
+        ],
+        "translations": {
+            "eng": "welcome"
+        },
+        "languages": {
+            "twi": "Asante Twi",
+            "aka": "Akan"
+        }
+    }
+]
+```
