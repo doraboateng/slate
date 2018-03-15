@@ -1,4 +1,4 @@
-## Update a country
+## Exact title match
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`PUT /countries/:id`
+`GET /:definitionType/title/:title`

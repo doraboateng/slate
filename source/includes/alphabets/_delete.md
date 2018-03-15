@@ -22,4 +22,4 @@
 
 ```
 
-`DELETE /alphabets/{id}`
+`DELETE /alphabets/:id`

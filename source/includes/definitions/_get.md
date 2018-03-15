@@ -79,4 +79,4 @@
 }
 ```
 
-`GET /definitions/{id}`
+`GET /definitions/:id`

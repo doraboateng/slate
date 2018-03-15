@@ -38,15 +38,17 @@ includes:
   - definitions/intro
   - definitions/list
   - definitions/get
-  - definitions/post
-  - definitions/put
+  - definitions/create
+  - definitions/create-title
+  - definitions/update
   - definitions/delete
+  - definitions/delete-title
   - definitions/daily
 
-  - types/intro
-  - types/count
-  - types/search
-  - types/title
+  - definition-types/intro
+  - definition-types/count
+  - definition-types/search
+  - definition-types/title
 
   - languages/intro
   - languages/list

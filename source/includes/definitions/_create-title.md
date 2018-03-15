@@ -1,4 +1,4 @@
-## Exact title match
+## Add a definition title
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`GET /{definitionType}/title/{title}`
+`POST /definitions/:id/title`

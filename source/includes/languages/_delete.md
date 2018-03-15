@@ -22,4 +22,4 @@
 
 ```
 
-`DELETE /languages/{id}`
+`DELETE /languages/:id`

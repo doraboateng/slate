@@ -1,4 +1,4 @@
-## Update a definition
+## Search
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`PUT /definitions/{id}`
+`GET /:definitionType/search/:query`

@@ -22,4 +22,4 @@
 
 ```
 
-`PUT /references/{id}`
+`PUT /references/:id`

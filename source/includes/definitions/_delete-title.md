@@ -1,4 +1,4 @@
-## Update a country
+## Delete a definition title
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`PUT /countries/:id`
+`DELETE /definitions/:id/title/:titleId`

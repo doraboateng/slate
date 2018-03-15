@@ -31,4 +31,4 @@
 }
 ```
 
-`GET /countries/{id}`
+`GET /countries/:id`

@@ -22,4 +22,4 @@
 
 ```
 
-`DELETE /countries/{id}`
+`DELETE /countries/:id`

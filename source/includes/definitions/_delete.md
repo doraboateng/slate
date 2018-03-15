@@ -22,4 +22,4 @@
 
 ```
 
-`DELETE /definitions/{id}`
+`DELETE /definitions/:id`

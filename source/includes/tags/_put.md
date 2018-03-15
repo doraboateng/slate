@@ -22,4 +22,4 @@
 
 ```
 
-`PUT /tags/{id}`
+`PUT /tags/:id`

@@ -64,4 +64,4 @@
 }
 ```
 
-`GET /languages/{code}`
+`GET /languages/:code`
