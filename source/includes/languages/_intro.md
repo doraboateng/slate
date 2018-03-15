@@ -7,6 +7,8 @@
 | **uri** | `[string]` Language URI |
 | **parentUri** | `[string]` URI of parent language |
 | **parentName** | `[string]` Name of parent language |
+| **children** | `[array]` Child languages |
+| **siblings** | `[array]` Sibling languages |
 | **definitionsCount** | `[integer]` Number of definitions in language |
 | **firstDefinition** | `[object]` First definition for language |
 | **latestDefinition** | `[object]` Latest definition for language |
