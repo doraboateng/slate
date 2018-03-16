@@ -22,4 +22,4 @@
 
 ```
 
-`POST /definitions/:id/title`
+`POST /definitions/:id/titles`

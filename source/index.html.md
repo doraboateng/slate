@@ -40,6 +40,7 @@ includes:
   - definitions/get
   - definitions/create
   - definitions/create-title
+  - definitions/upload-title-audio
   - definitions/update
   - definitions/delete
   - definitions/delete-title

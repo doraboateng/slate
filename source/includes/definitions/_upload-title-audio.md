@@ -1,4 +1,4 @@
-## Delete a definition title
+## Upload audio for a definition title
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`DELETE /definitions/:id/titles/:titleId`
+`POST /definitions/:id/titles/:titleId/audio`
