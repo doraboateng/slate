@@ -2,9 +2,9 @@
 title: Dora Boateng API Reference
 
 language_tabs:
-  - shell: Shell
-  - javascript: jQuery
+  - javascript: Javascript
   - php: PHP
+  - shell: cURL
 
 toc_footers:
   - <a href='https://www.doraboateng.com'>Dora Boateng</a>
@@ -13,6 +13,7 @@ toc_footers:
 includes:
   - intro/welcome
   - intro/overview
+  - intro/sample-code
   - intro/authentication
   - intro/collections
   - intro/embeds
@@ -38,6 +39,7 @@ includes:
   - definitions/intro
   - definitions/list
   - definitions/get
+  - definitions/get-titles
   - definitions/create
   - definitions/create-title
   - definitions/upload-title-audio
