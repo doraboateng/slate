@@ -1,4 +1,4 @@
-## Create a definition
+## Add a new definition
 
 > Sample request
 

@@ -1,10 +1,6 @@
-## Update a tag
+## Add a new language
 
 > Sample request
-
-```shell
-
-```
 
 ```javascript
 // ...
@@ -16,10 +12,14 @@
 // ...
 ```
 
+```shell
+
+```
+
 > Sample response
 
 ```json
 
 ```
 
-`PUT /tags/:id`
+`POST /languages`

@@ -1,4 +1,4 @@
-## Update a country
+## Update a tag
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`PUT /countries/:id`
+`PATCH /tags/:id`

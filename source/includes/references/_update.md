@@ -1,10 +1,6 @@
-## Create a language resource
+## Update a reference
 
 > Sample request
-
-```shell
-
-```
 
 ```javascript
 // ...
@@ -16,10 +12,14 @@
 // ...
 ```
 
+```shell
+
+```
+
 > Sample response
 
 ```json
 
 ```
 
-`POST /languages`
+`PATCH /references/:id`

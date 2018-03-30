@@ -1,4 +1,4 @@
-## Update an alphabet
+## Update a language
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`PUT /alphabets/:id`
+`PATCH /languages/:code`

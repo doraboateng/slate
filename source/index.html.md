@@ -21,28 +21,25 @@ includes:
   - intro/rate-limiting
 
   - alphabets/intro
-  - alphabets/list
-  - alphabets/get
   - alphabets/post
-  - alphabets/put
+  - alphabets/get
+  - alphabets/list
+  - alphabets/update
   - alphabets/delete
 
   - countries/intro
   - countries/list
   - countries/get
-  - countries/post
-  - countries/put
-  - countries/delete
 
   - cultures/intro
 
   - definitions/intro
-  - definitions/list
-  - definitions/get
-  - definitions/get-titles
   - definitions/create
   - definitions/create-title
   - definitions/upload-title-audio
+  - definitions/get
+  - definitions/get-titles
+  - definitions/list
   - definitions/update
   - definitions/delete
   - definitions/delete-title
@@ -54,25 +51,25 @@ includes:
   - definition-types/title
 
   - languages/intro
+  - languages/create
+  - languages/get
   - languages/list
   - languages/search
-  - languages/get
-  - languages/post
-  - languages/put
+  - languages/update
   - languages/delete
 
   - references/intro
-  - references/list
+  - references/create
   - references/get
-  - references/post
-  - references/put
+  - references/list
+  - references/update
   - references/delete
 
   - tags/intro
-  - tags/list
+  - tags/create
   - tags/get
-  - tags/post
-  - tags/put
+  - tags/list
+  - tags/update
   - tags/delete
 
 search: true

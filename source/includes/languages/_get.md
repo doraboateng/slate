@@ -1,4 +1,4 @@
-## Retrieve a language resource
+## Retrieve a language
 
 > Sample request
 

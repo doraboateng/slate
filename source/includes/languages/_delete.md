@@ -1,4 +1,4 @@
-## Delete a language resource
+## Delete a language
 
 > Sample request
 

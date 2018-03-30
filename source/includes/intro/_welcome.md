@@ -1,3 +1,3 @@
 # Introduction
 
-Welcome to Dora Boateng's API reference.
+Welcome to the Dora Boateng API reference.

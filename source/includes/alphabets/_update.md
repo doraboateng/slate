@@ -1,4 +1,4 @@
-## Create a country
+## Update an alphabet
 
 > Sample request
 
@@ -22,4 +22,4 @@
 
 ```
 
-`POST /countries`
+`PATCH /alphabets/:id`

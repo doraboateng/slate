@@ -1,4 +1,4 @@
-## Add a definition title
+## Add a new title for a definition
 
 > Sample request
 
